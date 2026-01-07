@@ -47,14 +47,14 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col w-250 h-dvh bg-white text-black items-start ml-50 gap-4 mt-10 h-500 rounded-4xl">
-      <h1 className="text-2xl ml-50 font-bold mt-20">
+    <div className="flex flex-col w-150 h-160 bg-white text-black items-start ml-50 gap-4 mt-10 rounded-4xl">
+      <h1 className="text-2xl ml-50 font-bold mt-10 flex justify-center items-center">
         {birthdays.length} Birthdays Today
       </h1>
       {birthdays.map((birthday) => {
         return (
           <div
-            className="flex justify-center gap-2 items-center text-xs ml-50"
+            className="flex justify-center gap-2 items-center text-xs ml-30"
             key={birthday.id}
           >
             <img
@@ -72,14 +72,14 @@ export default function Home() {
 
       {birthdays.length === 0 ? (
         <button
-          className="bg-pink-400 rounded-3xl w-100 ml-50 font-light text-xs text-white"
+          className="bg-pink-400 rounded-3xl w-100 ml-30 font-light text-xs text-white"
           onClick={resetAll}
         >
           Reset
         </button>
       ) : (
         <button
-          className="bg-pink-400 rounded-3xl w-100 ml-50 font-light text-xs text-white"
+          className="bg-pink-400 rounded-3xl w-100 ml-30 font-light text-xs text-white"
           onClick={clearAll}
         >
           Clear All
